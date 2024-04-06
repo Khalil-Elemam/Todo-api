@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todo_app
+    username: postgres
+    password: Khalil100100
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: POSTGRESQL
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+
+application:
+  security:
+    jwt:
+      secret-key: BC199D34B007BD069B98B8B3587C3B38D2A242EB42FA318678D1D3FF99F98FED
+      access-token:
+        expiration: 86400000
+
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: trace
